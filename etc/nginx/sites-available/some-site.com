@@ -1,7 +1,7 @@
 server {
 	listen 443 ssl;
 	listen 80;
-	server_name some-site.com www.manchestercarersnetwork.org.uk;
+	server_name some-site.com www.some-site.com;
 	location / {
 		proxy_pass http://127.0.0.1:8080;
 	}
