@@ -10,7 +10,7 @@
 
 server {
         listen 80 default_server;
-	include etc/nginx/includes/letsencrypt;
+	include /etc/nginx/includes/letsencrypt;
         location / {
                 return 302 https://$host$request_uri;
         }
