@@ -1,0 +1,10 @@
+# nginx is `order allow,deny` by default; list the permitted addresses in CIDR
+# format as 'allows' and then 'deny all' at the end:
+
+allow 192.0.2.1/32;
+allow 192.0.2.4/32;
+allow 03.0.113.0/24;
+deny all;
+
+
+

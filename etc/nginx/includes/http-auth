@@ -1,0 +1,7 @@
+# Only two directives are needed for HTTP auth in nginx, auth_basic has the 
+# 'authname' and the file in auth_basic_user_file can be made with the htpasswd
+# tool that comes with the apache2-utils package in Debian. 
+
+auth_basic            "Restricted";
+auth_basic_user_file  /etc/nginx/htpasswd;
+
