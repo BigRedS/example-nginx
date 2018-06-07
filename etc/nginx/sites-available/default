@@ -1,8 +1,16 @@
+# This is a default Nginx server (a 'server' is to nginx as 'vhost' is to
+# apache)
+#
+# It redirects visitors to the HTTPS equivalent of the site they asked for
+# in cleartext, unless it's a Lets Encrypt validation request (which always
+# go for `/.well-known/acme-challenge`).
+#
+# With this set, '/var/www/letsencrypt' is the right thing to use for Let's
+# Encrypt's webroot (and must exist first).
+
 server {
         listen 80 default_server;
-        location /.well-known/acme-challenge {
-                root /var/www/letsencrypt;
-        }
+	include etc/nginx/includes/letsencrypt;
         location / {
                 return 302 https://$host$request_uri;
         }
