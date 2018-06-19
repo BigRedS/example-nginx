@@ -19,7 +19,7 @@ server {
 	ssl_certificate /etc/letsencrypt/live/some-site.com/fullchain.pem;
 	ssl_certificate_key /etc/letsencrypt/live/some-site.com/privkey.pem;
 
-	include /etc/nginx/includes/proxy;
-	include /etc/nginx/includes/letsencrypt;
+	include /etc/nginx/snippets/proxy;
+	include /etc/nginx/snippets/letsencrypt;
 
 }
